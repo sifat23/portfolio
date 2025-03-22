@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@font-face {
+  font-family: 'MySignature';
+  src: url(../../public/fonts/wow.ttf);
+}
+
+@font-face {
+  font-family: 'headerStyle';
+  src: url(../../public/fonts/nice.ttf);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-family: "Ubuntu", sans-serif; */
+  font-family: "Encode Sans Condensed", sans-serif;
+}
+
+.bg-theme-dark {
+  background: var(--background);
+}
+
+.right-side-shadow {
+  /* box-shadow: 5px 0 10px -2px #888; */
+  box-shadow: 5px 0 10px -2px oklch(.828 .189 84.429);
+}
+
+.header-text {
+  /*font-family: "headerStyle",  sans-serif;*/
+   font-family:  "Dancing Script", cursive;
+}
+
+.signature {
+  /* font-family: "Cedarville Cursive", cursive; */
+  font-family: "MySignature",  sans-serif;
+}
+
+.bg-card {
+  background: #212121;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
