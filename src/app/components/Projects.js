@@ -1,15 +1,16 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Projects = ({ className }) => {
 
     const projects = [
-        {name: "Remedive", link: "https://remedive.com/", active: "true", logo: 'img/projects/remedive.png'},
-        {name: "Thyme", link: "https://thymeapp.jp/", active: "true", logo: "img/projects/thyme.png"},
-        {name: "Staffingly, Inc", link: "https://staffingly.com/", active: "true", logo: "img/projects/staffingly.svg"},
-        {name: "Hie.li", link: "https://hie.li/", active: "true", height: "w-20", logo: "img/projects/hie-li.png"},
-        {name: "Timeclock - EMS", link: "https://timeclock.staffingly.com/", active: "true", height: "w-20", logo: "img/projects/twopm.png"},
-        {name: "Fitnation.pro", link: "https://fitnation.pro/", active: "true", logo: "img/projects/fitnation-pro-logo.png"},
-        {name: "Steah", link: "https://steah.co.jp/", active: "true", logo: "img/projects/steah.png"},
+        {name: "Remedive", link: "https://remedive.com/", active: "true", logo: '/img/projects/remedive.png'},
+        {name: "Thyme", link: "https://thymeapp.jp/", active: "true", logo: "/img/projects/thyme.png"},
+        {name: "Staffingly, Inc", link: "https://staffingly.com/", active: "true", logo: "/img/projects/staffingly.svg"},
+        {name: "Hie.li", link: "https://hie.li/", active: "true", height: "20", logo: "/img/projects/hie-li.png"},
+        {name: "Timeclock - EMS", link: "https://timeclock.staffingly.com/", active: "true", height: "20", logo: "/img/projects/twopm.png"},
+        {name: "Fitnation.pro", link: "https://fitnation.pro/", active: "true", logo: "/img/projects/fitnation-pro-logo.png"},
+        {name: "Steah", link: "https://steah.co.jp/", active: "true", logo: "/img/projects/steah.png"},
         // { name: "Thyme", link: "", active: "true" },
         // { name: "Thyme", link: "", active: "true" },
     ]
@@ -32,7 +33,9 @@ const Projects = ({ className }) => {
                               <div className={"sm:w-[220px] mb-6 border rounded-lg h-20 sm:h-32 p-8 flex justify-center items-center border-amber-400 shadow-md shadow-amber-400 hover:shadow-lg duration-200"} key={key}>
                                   <Link target="_blank" href={project.link}>
                                       {/*{project.name}*/}
-                                      <img className={`object-contain invert ${project?.height ? project?.height : 'w-32 sm:w-48'}`} src={project?.logo} alt={project.name + "-logo"}/>
+                                      <div className={'invert'}>
+                                          <Image height={300} width={300} src={project?.logo} alt={project.name + "-logo"}/>
+                                      </div>
                                   </Link>
                               </div>
                           )

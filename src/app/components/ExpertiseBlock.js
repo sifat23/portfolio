@@ -1,7 +1,10 @@
+
+
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { IoMdRemoveCircleOutline } from "react-icons/io";
 
 import { Tooltip } from 'react-tooltip'
+import Image from "next/image";
 const ExpertiseBlock = ({ items }) => {
 
     return (
@@ -14,7 +17,15 @@ const ExpertiseBlock = ({ items }) => {
                             <li key={key} className={"pb-3 pt-1 inline-flex"}>
                                 <div className={"flex items-center"}>
                                     {/*<span>{child.name}</span>*/}
-                                    <img className={"w-12 object-contain"} src={child?.logo} alt={child.name}/>
+                                    <div>
+                                        {/*<Image width={"40"} height={"40"} src={child?.logo} alt={child?.name}/>*/}
+                                        <Image
+                                            src={child?.logo}
+                                            width={50}
+                                            height={50}
+                                            alt="Picture of the author"
+                                        />
+                                    </div>
                                     {child.level === 'Expert' && (
                                         <div>
                                             <Tooltip

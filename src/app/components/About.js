@@ -5,33 +5,33 @@ const About = ({ className }) => {
         {
             name: "Technologies",
             sub: [
-                {logo: "tech/js.png", name: "JavaScript", level: "Expert"},
-                {logo: "tech/html.png", name: "HTML", level: "Expert"},
-                {logo: "tech/css.png", name: "CSS", level: "Expert"},
-                {logo: "tech/php.png", name: "PHP", level: "Expert"},
-                {logo: "tech/vue.png", name: "VueJs", level: "Intermediate"},
-                {logo: "tech/react.png", name: "ReactJs", level: "Intermediate"},
+                {logo: "/tech/js.png", name: "JavaScript", level: "Expert"},
+                {logo: "/tech/html.png", name: "HTML", level: "Expert"},
+                {logo: "/tech/css.png", name: "CSS", level: "Expert"},
+                {logo: "/tech/php.png", name: "PHP", level: "Expert"},
+                {logo: "/tech/vue.png", name: "VueJs", level: "Intermediate"},
+                {logo: "/tech/react.png", name: "ReactJs", level: "Intermediate"},
             ]
         },
         {
             name: "Frameworks / Libraries",
             sub: [
-                {logo: "tech/laravel.png", name: "Laravel", level: "Expert"},
-                {logo: "tech/jquery.png", name: "jQuery", level: "Expert"},
-                {logo: "tech/nuxt.png", name: "Nuxt.js", level: "Intermediate"},
-                {logo: "tech/next.png", name: "Next.js", level: "Intermediate"},
+                {logo: "/tech/laravel.png", name: "Laravel", level: "Expert"},
+                {logo: "/tech/jquery.png", name: "jQuery", level: "Expert"},
+                {logo: "/tech/nuxt.png", name: "Nuxt.js", level: "Intermediate"},
+                {logo: "/tech/next.png", name: "Next.js", level: "Intermediate"},
             ]
         },
         {
             name: "Database",
             sub: [
-                {logo: "tech/mysql.png", name: "MySQL", level: "Expert"},
+                {logo: "/tech/mysql.png", name: "MySQL", level: "Expert"},
             ]
         },
         {
             name: "Version Control",
             sub: [
-                {logo: "tech/git.png", name: "Git", level: "Intermediate"}
+                {logo: "/tech/git.png", name: "Git", level: "Intermediate"}
             ]
         }
     ]
@@ -47,7 +47,7 @@ const About = ({ className }) => {
                         <div className={"header-text text-4xl font-bold sm:mb-4 block"}>About Me</div>
                         <div className={"text-lg w-full"}>
                             <div className={"my-1"}>
-                                I'm Saleh Ahmad.
+                                {"I'm Saleh Ahmad"}.
                             </div>
                             <div className={"mb-1"}>
                                 A genius <span className={spanClasses}>software engineer</span> with

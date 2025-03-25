@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const JobExperience = ({className}) => {
 
@@ -59,8 +60,8 @@ const JobExperience = ({className}) => {
                     <Link href={"https://revo-interactive.com"} target={"_blank"}>
                         <div
                             className={"p-3 sm:p-6 rounded-lg border border-amber-400 shadow-md hover:shadow-lg duration-200 shadow-amber-400 bg-card"}>
-                            <img className={"w-[110px] object-contain"}
-                                 src={"https://revo-interactive.com/frontend/assets/img/logo-white.png"}
+                            <Image height={150} width={115}
+                                 src={"/img/logo-white.png"}
                                  alt={"revo"}/>
                             <div className={"mt-3 text-md tracking-widest"}>
                                 Worked as <span className={spanClasses}>Senior Backend Developer</span>

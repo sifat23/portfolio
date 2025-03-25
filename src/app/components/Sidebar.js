@@ -1,6 +1,7 @@
 import Navigation from "@/app/components/Navigation";
 import {VscCloudDownload} from "react-icons/vsc";
 import Contact from "@/app/components/Contact";
+import Image from "next/image";
 
 const Sidebar = ({handleActive}) => {
 
@@ -13,10 +14,10 @@ const Sidebar = ({handleActive}) => {
                 <div className={"flex flex-col sm:flex-row"}>
                     <div className={'w-full sm:w-10/12'}>
                         <div className={""}>
-                            <img className="rounded-lg h-44 object-contain" src={"img/photo.png"} alt="Saleh Ahmad"/>
+                            <Image width={170} height={170} className={"rounded"} src={"/img/photo.png"} alt="Saleh Ahmad"/>
                         </div>
                         <div className={"text-left mt-2"}>
-                            <div className={"mb-2 text-lg"}>I'm</div>
+                            <div className={"mb-2 text-lg"}>{"I'm"}</div>
                             <span className={`${spanClasses} text-5xl`}>Saleh Ahmad</span>
                             <div className={"mt-2 text-lg"}>
                                 A Passionate <span>Full-Stack Developer</span>, who is born in Bangladesh, specializing
