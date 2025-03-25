@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: 'MySignature';
-  src: url(../../public/fonts/wow.ttf);
+  src: url('/fonts/wow.ttf');
 }
 
 @font-face {
