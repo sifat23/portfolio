@@ -16,14 +16,14 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
     - name: connect and pull
-      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull"
-    - name: cleanup
-      run: rm -rf ~/.ssh
+      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull "
+
     - name: install node_modules
-      run: |
-        cd ${{ secrets.WORK_DIR }}
-        npm install
+      run: npm install
     - name: build the code
       run: npm run build
     - name: restart pm2
       run: pm2 restart portfolio
+
+#        - name: cleanup
+#          run: rm -rf ~/.ssh
