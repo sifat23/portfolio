@@ -19,3 +19,7 @@ jobs:
       run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && git checkout ${{ secrets.MAIN_BRANCH }} && git pull"
     - name: cleanup
       run: rm -rf $HOME/.ssh
+    - name: build the code
+      run: npm run build
+    - name: restart pm2
+      run: pm2 restart portfolio
