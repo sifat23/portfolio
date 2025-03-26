@@ -20,7 +20,9 @@ jobs:
     - name: cleanup
       run: rm -rf ~/.ssh
     - name: install node_modules
-      run: npm install
+      run: |
+        cd ${{ secrets.WORK_DIR }}
+        npm install
     - name: build the code
       run: npm run build
     - name: restart pm2
