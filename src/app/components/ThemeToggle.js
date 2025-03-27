@@ -1,20 +1,29 @@
 import Switch from "react-switch";
 import {IoMoon} from "react-icons/io5";
 import {BsSunFill} from "react-icons/bs";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 const ThemeToggle = ({ className }) => {
+    const [theme, setTheme] = useState(() => {
+        return localStorage.getItem("theme");
+    });
 
-    const [checked, setChecked] = useState(false);
+    useEffect(() => {
+        document.documentElement.classList.remove("light", "dark");
+        document.documentElement.classList.add(theme);
+        localStorage.setItem("theme", theme);
+    }, [theme]);
 
-    const handleChange = (checked) => {
+    const [checked, setChecked] = useState(() => {
+        return localStorage.getItem("theme") === 'light';
+    });
 
-
-        setChecked(checked);
-        console.log(checked)
+    const handleChange = () => {
+        setChecked(!checked);
+        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     };
 
     return (
-        <div className={`absolute right-[20px] top-[20px] p-4 ${className}`}>
+        <div className={`z-10 absolute right-[20px] top-[20px] p-4 ${className}`}>
             <Switch
                 onColor={"#FFCA28"}
                 onChange={handleChange}
@@ -48,7 +57,8 @@ const ThemeToggle = ({ className }) => {
                         <BsSunFill/>
                     </div>
                 }
-                checked={checked}/>
+                // checked={theme === 'light'}/>
+                 checked={checked}/>
         </div>
     )
 }
