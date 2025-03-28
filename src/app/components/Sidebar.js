@@ -13,11 +13,11 @@ const Sidebar = ({handleActive}) => {
             <div className="w-full sm:w-3/8 pl-4 sm:pl-36 pr-4 sm:pr-24 pt-4 sm:pt-20 sm:fixed overflow-auto">
                 <div className={"flex flex-col sm:flex-row"}>
                     <div className={'w-full sm:w-10/12'}>
-                        <div className={""}>
+                        <div className={"rounded overflow-hidden w-[170px]"}>
                             <Image width={0}
                                    height={0}
                                    sizes="100vw"
-                                   style={{ width: '40%', height: 'auto', borderRadius: '6px' }}
+                                   style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
                                    src={"/img/photo.png"}
                                    alt="Saleh Ahmad"/>
                         </div>

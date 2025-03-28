@@ -60,9 +60,14 @@ const JobExperience = ({className}) => {
                     <Link href={"https://revo-interactive.com"} target={"_blank"}>
                         <div
                             className={"p-3 sm:p-6 rounded-lg border border-amber-400 shadow-md hover:shadow-lg duration-200 shadow-amber-400 bg-card"}>
-                            <Image height={150} width={115}
-                                 src={"/img/logo-white.png"}
-                                 alt={"revo"}/>
+                            <div className={"rounded overflow-hidden w-[115px]"}>
+                                <Image width={0}
+                                       height={0}
+                                       sizes="100vw"
+                                       style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+                                       src={"/img/logo-white.png"}
+                                       alt={"revo"}/>
+                            </div>
                             <div className={"mt-3 text-md tracking-widest"}>
                                 Worked as <span className={spanClasses}>Senior Backend Developer</span>
                             </div>

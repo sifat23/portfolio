@@ -17,13 +17,21 @@ const ExpertiseBlock = ({ items }) => {
                             <li key={key} className={"pb-3 pt-1 inline-flex"}>
                                 <div className={"flex items-center"}>
                                     {/*<span>{child.name}</span>*/}
-                                    <div>
-                                        {/*<Image width={"40"} height={"40"} src={child?.logo} alt={child?.name}/>*/}
-                                        <Image
-                                            src={child?.logo}
-                                            width={50}
-                                            height={50}
-                                            alt="Picture of the author"
+                                    {/*<div>*/}
+                                    {/*    /!*<Image width={"40"} height={"40"} src={child?.logo} alt={child?.name}/>*!/*/}
+                                    {/*    <Image*/}
+                                    {/*        src={child?.logo}*/}
+                                    {/*        width={50}*/}
+                                    {/*        height={50}*/}
+                                    {/*        alt="Picture of the author"*/}
+                                    {/*    />*/}
+                                    {/*</div>*/}
+                                    <div className={"rounded overflow-hidden w-[50px]"}>
+                                        <Image width={0}
+                                               height={0}
+                                               sizes="100vw"
+                                               style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+                                               src={child?.logo} alt={child?.name}
                                         />
                                     </div>
                                     {child.level === 'Expert' && (
