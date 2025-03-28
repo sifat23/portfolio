@@ -14,7 +14,12 @@ const Sidebar = ({handleActive}) => {
                 <div className={"flex flex-col sm:flex-row"}>
                     <div className={'w-full sm:w-10/12'}>
                         <div className={""}>
-                            <Image width={170} height={170} className={"rounded"} src={"/img/photo.png"} alt="Saleh Ahmad"/>
+                            <Image width={0}
+                                   height={0}
+                                   sizes="100vw"
+                                   style={{ width: '40%', height: 'auto', borderRadius: '6px' }}
+                                   src={"/img/photo.png"}
+                                   alt="Saleh Ahmad"/>
                         </div>
                         <div className={"text-left mt-2"}>
                             <div className={"mb-2 text-lg"}>{"I'm"}</div>

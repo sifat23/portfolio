@@ -1,9 +1,7 @@
 'use client';
 
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import Projects from "@/app/components/Projects";
-import ThemeToggle from "@/app/components/ThemeToggle";
-
 import Sidebar from "@/app/components/Sidebar";
 import About from "@/app/components/About";
 import JobExperience from "@/app/components/JobExperience";
@@ -11,16 +9,13 @@ import {motion, AnimatePresence} from "motion/react"
 import Header from "@/app/components/Header";
 import Head from "next/head";
 
+
 const Last = () => {
     const [active, setActive] = useState("about-me");
 
-    useEffect(() => {
-        document.title = "Saleh Ahmad Sifat";
-    }, []);
-
     return (
         <div className="lg:flex h-screen">
-            <ThemeToggle className={"hidden sm:block"}/>
+            {/*<ThemeToggle className={"hidden sm:block"}/>*/}
             <Header/>
             <Sidebar handleActive={(value) => setActive(value)}/>
             <div className="w-full sm:w-5/8 pb-12">

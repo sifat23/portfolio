@@ -3,23 +3,29 @@ import {IoMoon} from "react-icons/io5";
 import {BsSunFill} from "react-icons/bs";
 import {useEffect, useState} from "react";
 const ThemeToggle = ({ className }) => {
-    const [theme, setTheme] = useState(() => {
-        return localStorage.getItem("theme");
-    });
 
-    useEffect(() => {
-        document.documentElement.classList.remove("light", "dark");
-        document.documentElement.classList.add(theme);
-        localStorage.setItem("theme", theme);
-    }, [theme]);
+    // const getCurrentTheme = () => window.matchMedia("(prefers-color-scheme: light)").matches;
 
+    const [theme, setTheme] = useState("dark");
     const [checked, setChecked] = useState(() => {
-        return localStorage.getItem("theme") === 'light';
+        return theme === 'light';
     });
+
+
+    // useEffect(() => {
+    //     document.documentElement.classList.remove("light", "dark");
+    //     document.documentElement.classList.add(theme);
+    //
+    //     if (typeof window !== "undefined") {
+    //         localStorage.setItem("theme", theme);
+    //     } else {
+    //         window.localStorage.setItem("theme", theme);
+    //     }
+    // }, [theme]);
 
     const handleChange = () => {
         setChecked(!checked);
-        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+        // setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     };
 
     return (
