@@ -23,7 +23,7 @@ jobs:
       run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && npm install && npm run build"
 
     - name: restart pm2
-      run: ssh root@${{ secrets.SSH_HOST }} "pm2 restart portfolio"
+      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "pm2 restart portfolio"
 
     - name: cleanup
       run: rm -rf ~/.ssh
