@@ -9,9 +9,9 @@ const ExpertiseBlock = ({ items }) => {
 
     return (
         <>
-            <li><span className={"font-bold"}>{items.name}</span></li>
+            <li className={'grow'}><span className={"font-bold"}>{items.name}</span></li>
             <li>
-                <ul className={"flex sm:flex-row gap-4 sm:gap-24"}>
+                <ul className={"flex sm:flex-row mt-1 gap-1 sm:gap-24"}>
                     {items.sub.length > 0 && items.sub.map((child, key) => {
                         return (
                             <li key={key} className={"pb-3 pt-1 inline-flex"}>

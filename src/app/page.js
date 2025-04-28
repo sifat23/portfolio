@@ -58,6 +58,7 @@ const Last = () => {
                     </AnimatePresence>
                 </main>
                 <main className="block sm:hidden">
+                    <About theme={"mobile"}/>
                     <motion.div
                         className={""}
                         key="experience"

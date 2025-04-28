@@ -1,6 +1,6 @@
 import ExpertiseBlock from "@/app/components/ExpertiseBlock";
 
-const About = ({ className }) => {
+const About = ({ className, theme = "desktop" }) => {
     const expertise = [
         {
             name: "Technologies",
@@ -43,7 +43,7 @@ const About = ({ className }) => {
         <div className={`${className}`}>
             <div className={`text-xl px-4 sm:px-14 pt-4 sm:h-screen sm:flex sm:items-center`}>
                 <div>
-                    <div className={"sm:pr-36 mt-8"}>
+                    <div className={`sm:pr-36 mt-8 ${theme !== 'desktop' ? 'hidden': 'block'}`}>
                         <div className={"header-text text-4xl font-bold sm:mb-4 block"}>About Me</div>
                         <div className={"text-lg w-full"}>
                             <div className={"my-1"}>
@@ -80,12 +80,10 @@ const About = ({ className }) => {
                             </div>
                         </div>
                     </div>
-
-
                     <div className={'mt-4 sm:mt-8 pr-36'}>
                         <div className={"header-text text-4xl mt-8 mb-2 font-bold sm:mb-4"}>Expertise</div>
-                        <div>
-                            <ul className={""}>
+                        <div className={"grid"}>
+                            <ul className={"grow"}>
                                 {expertise.length > 0 && expertise.map((items, key) => {
                                     return (
                                         <ExpertiseBlock
